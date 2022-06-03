@@ -6,13 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/et_lat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="위도"
+        app:layout_constraintBottom_toTopOf="@id/btn_search"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/et_lon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경도"
+        app:layout_constraintBottom_toTopOf="@id/btn_search"
+        app:layout_constraintLeft_toRightOf="@id/et_lat"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_lat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_lat"
+        app:layout_constraintBottom_toTopOf="@id/btn_search"
+        android:text="결과"
+        android:textColor="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
